@@ -1,5 +1,8 @@
 # VueJS 3 Tutorial 
 
+## PluralSight 
+	https://app.pluralsight.com/paths/skill/building-web-apps-with-vue
+
 ## Clone Repository
 1. Clone this repository
 	```
