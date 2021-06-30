@@ -1,0 +1,8 @@
+So far, we have seen data methods and computed objects in the Vue instance. 
+There is one more property that allows you to manipulate data which are called watchers.
+
+Watchers watch your data for changes.
+whenever a change occurs, you can run a function to execute additional logic.
+In a sense, it's way to hook into process of when a value is updated.
+
+

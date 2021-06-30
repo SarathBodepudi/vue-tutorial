@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>Hey {{firstName}} {{ lastName }}</p>
+
+    {{ fullName() }}
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+Added v-cloak to the root element. 
+To the browser, this is an attribute. 
+But to Vue, it is a directive.
+Unlike 'attributes', directives change how an element behaves. Example changing the color OR removing element
+
+SEE 'main.css' file for new selector for v-cloak attribute.
+     Attributes can be selected by wrapping their names with a pair of square brackets
+
+NOTE:
+      All direcitves start with V, followed by the name of the directive.
+      Directives can have expressions of values
+
+
+-->

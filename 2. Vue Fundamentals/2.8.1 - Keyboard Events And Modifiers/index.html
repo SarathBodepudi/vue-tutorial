@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Middle Name :</label>
+    <input type="text"  @keyup.enter="updateMiddleName('enter key pressed', $event)"/>
+
+    <label>Last Name :</label>
+    <input type="text"  :value="lastName" @input.prevent="updatedLastName('Last Name event triggered', $event)"/>
+
+
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+This example is to capture key board events.
+
+In this example, enter the middle name and hit 'Enter' button and then the full name abuve the horizontal row will be updated with middle name
+
+https://v3.vuejs.org/guide/events.html#event-modifiers
+https://keycode.info/
+
+ -->

@@ -1,0 +1,6 @@
+Conditional rendering is when elements are added or removed from the document based on a condition.
+Element is added is the condition is true. Otherwise element is removed
+
+This solution can be implemented by toggling the display or visibility properties on an element.
+
+

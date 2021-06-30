@@ -1,0 +1,1 @@
+Two way data binding is the ability to update the data through the html document od JavaScript file.

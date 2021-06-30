@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app">
+    <p>Hey {{firstName}} {{ lastName }}</p>
+
+    {{ fullName() }}
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+NOTE: Notice the usage of method fullName()
+
+  Run with network throttle set to 'Slow 3g'.
+
+  How to throttle?
+  Press F12 in chrome to open developer tools. Goto Network tab. Set the throttle. Refresh the web page. you will see all ugly expressions.
+  
+  This is resolved by using the directives as illustrated in '2.4-Directives'
+
+-->

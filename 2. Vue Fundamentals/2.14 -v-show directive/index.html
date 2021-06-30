@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div id="app">
+    <p v-if="mode == 1">Showing v-if directive content</p>
+    <template v-else-if="mode == 2">
+      <p>Bonus content</p>
+      <h3>v-else-if</h3>
+    </template>
+    <p v-else>v-else</p>
+
+    <i v-show="mode == 1">v-show</i>
+
+    <select v-model="mode">
+      <option value="1">v-if</option>
+      <option value="2">v-else-if</option>
+      <option value="3">v-else</option>
+    </select>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+<!--
+Vue provides alreternative solution to conditional rendering. 
+Sometimes you will want the element to stay exactly where it is, but hide it with CSS.
+its possible to achieve this task by binding styles and classes.
+
+* Unlike v-if directive, v-show element does not remove the element if the condition turns out to be false.
+* If false, the display CSS property will be set to none. Otherwise, uses the default display
+* v-show does not work with the v-else directive or <template> tag
+* Expensive on load
+* Cheap on toggle
+-->
+</html>

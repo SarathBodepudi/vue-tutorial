@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <p><a v-bind:href="url" target="_blank">Google</a></p>
+    <p><a :href="url" target="_blank">Google</a></p>
+
+    <p>{{ age }}</p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Last Name :</label>
+    <input type="text"  v-model="lastName"/>
+    <input type="text"  :value="lastName" @input="updatedLastName"/>
+
+    <button type="button" v-on:click = "increment">Increment Age</button> 
+    <button type="button" @click = "increment">Increment Age</button> 
+    <div></div>
+    <button type="button" v-on:click = "age--">Decrement Age</button>
+    <button type="button" @click = "age--">Decrement Age</button>
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+v-on directive
+
+v-on directive listens to an event.
+
+All javascript events are supported by this directive
+
+The value ofthe directive can be one ofthe two things - you can either execute code or pass in the name of the method you like to run whenever the event occurs
+
+We used both ways in above example
+
+Notice that we did not add the parenthesis after the 'increment' function name. This is entirely optional. 
+If you do not plan on passing anything to your function, parenthesis can be omitted
+  
+ALSO, there is a short hand available for listening for events.
+Rather than using v-on, we can replace this directive with '@' character
+
+
+NOTE: If you don't pass on arguments to the function, Vue will pass event object by default
+ -->

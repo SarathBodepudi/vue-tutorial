@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div id="app">
+    <label>
+      <input type="checkbox" v-model="isPurple"/> Purple
+    </label>
+
+    <!-- Here, if there are too many css classes, code becomes uglier. So, use computed properties-->
+    <div class="circle" :class="{purple: isPurple}">
+      Hi!
+    </div>
+
+    <!-- Exmple to use computed properties. This will simplify the code if there are too many css classes-->
+    <div class="circle" :class="circle_classes">
+      Hi!
+    </div>
+
+    <div><hr/></div>
+    <select v-model="selectedColor">
+      <option value="">white</option>
+      <option value="text-black">Black</option>
+      <option value="text-orange">Orange</option>
+    </select>
+
+    <!-- Here, if there are too many css classes, code becomes uglier. So, use computed properties-->
+    <div class="circle" :class="[selectedColor, circle_classes]">
+      Hi!
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+<!--
+
+We are binding a class attribute on the div tag with class circle.
+Notice there are 2 class attributes on  the same element.
+Vue is smart enough to merge them after the template has been processed
+
+The value for this attribute will be an object. the object can contain a list of classes to apply. 
+The key name will represent the class name. The value will be the condition. If the condition is true, the class will be added. Otherwise, it will be removed.
+
+Add v-model directive to the checkbox for the toggling to work
+-->

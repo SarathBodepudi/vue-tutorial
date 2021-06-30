@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <p><a v-bind:href="url" target="_blank">Google</a></p>
+    <p><a :href="url" target="_blank">Google</a></p>
+
+    <p>{{ age }}</p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Last Name :</label>
+    <input type="text"  v-model="lastName"/>
+    <input type="text"  :value="lastName" @input.prevent="updatedLastName('Last Name event triggered', $event)"/>
+
+    <button type="button" v-on:click = "increment">Increment Age</button> 
+    <button type="button" @click = "increment">Increment Age</button> 
+    <div></div>
+    <button type="button" v-on:click = "age--">Decrement Age</button>
+    <button type="button" @click = "age--">Decrement Age</button>
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+Event modifiers can be used by adding a dot after the event name.
+Notice that 'prevent' modifier is added to the input event. Adding this is equavalent of calling the preventDefaultMethod() in the function.
+
+We can now remove the line (in updatedLastName() method) where we call preventDefault() as we are using event modifiers
+ -->

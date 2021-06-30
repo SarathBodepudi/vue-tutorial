@@ -1,0 +1,24 @@
+body {
+  font-size: 22px;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  display: block;
+}
+
+/*
+  Any element that have this attribute will be hidden in the document.
+  Since this is the case, the use won't see the ugly expression.
+  Run 2.3.1 example with network throttle set to 'Slow 3g'.
+
+  How to throttle?
+  Press F12 in chrome to open developer tools. Goto Network tab. Set the throttle. Refresh the web page. you will see all ugly expressions.
+  
+  This is resolved by using the directives as illustrated in this example
+
+  Eventually, Vuw will be mounted onto the document, causing the directive to be removed
+*/
+[v-cloak] {
+  display: none;
+}

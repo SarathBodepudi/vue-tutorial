@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <p><a v-bind:href="url" target="_blank">Google</a></p>
+    <p><a :href="url" target="_blank">Google</a></p>
+
+    <p>{{ age }}</p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Last Name :</label>
+    <input type="text"  v-model="lastName"/>
+    <input type="text"  :value="lastName" @input="updatedLastName('Last Name event triggered', $event)"/>
+
+    <button type="button" v-on:click = "increment">Increment Age</button> 
+    <button type="button" @click = "increment">Increment Age</button> 
+    <div></div>
+    <button type="button" v-on:click = "age--">Decrement Age</button>
+    <button type="button" @click = "age--">Decrement Age</button>
+
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+This example is to illustrate how we can pass on data with events.
+
+For example, we want to pass a simple message to log into console.
+See lastName input element with function passing a string
+
+We are also passing the event object manually. 
+You must assign the $ sign symbol because its the name Vuw assign the event object to.
+ -->

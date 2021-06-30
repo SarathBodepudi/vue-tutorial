@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Last Name :</label>
+    <input type="text"  v-model="lastName"/>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+We have 2 input fileds here..one for first name and the other for last name.
+
+How do we tie these input fields to the data?
+
+Answer is to use the directives
+
+Vue provides the directives for linking the data inside the input fields to the data
+
+The values for directives are interpreted as expresssions.
+
+The value that gets evaluated from the expression is what will be used as the value for the input field
+
+v-model directive requires a value, which is an expression
+
+Notice that we did did not add curly braces for v-model values. This is because, directives automatically assume the value is an expression 
+
+
+Run the example and you wil notive the input fields are pre filled with first and last names.
+
+If you edit those fields, the 'full Name' above the horizontal line on the browser reflects the new value
+
+This is called reactivity.
+
+Reactivity is the process of updating the document whenever the data changes
+Once a change happends, Vue will look at the template and it will identify any expressions that need to get evaluated again.
+The template then gets updated again with the new values.
+
+
+-->

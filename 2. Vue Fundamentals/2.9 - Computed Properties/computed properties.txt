@@ -1,0 +1,5 @@
+Definition of compute - "To calculate something"
+Calculation can be anything from basic math to concatenating strings to form a full word, phrase or sentence
+
+Computed properties are properties that are calculated in some sort of manner.
+

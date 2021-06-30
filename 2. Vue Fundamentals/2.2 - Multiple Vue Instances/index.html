@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div class="app">
+    <p>Hey {{firstName}} {{ lastName }}</p>
+  </div>
+
+  <!-- Cannot have more than one root element -->
+  <div class="app2">
+    <p>Hey {{firstName}} {{ lastName }}</p>
+  </div>
+
+  <!-- Another Root element - notice app2 -->
+  <div class="app2">
+    <p>Hey {{firstName}} {{ lastName }}</p>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+A Vue instance can only be mounted to one element
+We are allowed to have children elements, but there can only one root element
+
+-->

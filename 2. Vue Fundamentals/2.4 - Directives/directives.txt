@@ -1,0 +1,4 @@
+Directives are the attributes that change the bahavior of the element it is applied to.
+Directives are simple to use
+Vue comes with built-in Directives
+We can create our own directives as well

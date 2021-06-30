@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VueJS Course</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+  <!-- Root element -->
+  <div id="app" v-cloak>
+    <p>{{ fullName() }}</p>
+    <p><a v-bind:href="url" target="_blank">Google</a></p>
+    <p><a :href="url" target="_blank">Google</a></p>
+    <hr/>
+
+    <label>First Name :</label>
+    <input type="text" v-model="firstName" />
+
+    <label>Last Name :</label>
+    <input type="text"  v-model="lastName"/>
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+In some cases, you may want to have dynamic HTML attributes. 
+Rather than hard coding the url, lets store it inside data object in app.js file
+
+We will add v-bind directive in front of the href attribute.
+v-bind directive will allow an html directive to have a dynamic value
+
+You can apply this to any attribute by adding it before the attribute. colon will act as a seperator between directive and attibute
+
+See line 15. href attribute without v-bind directive. there is just a colon. If Vue finds a colon before the attribute, 
+it will assume that you will want to bind the attribute 
+
+ -->
