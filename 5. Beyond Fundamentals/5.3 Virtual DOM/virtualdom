@@ -1,0 +1,12 @@
+What is compile?
+-> To take in something and convert it into something else
+
+JavaScript is a la language that gets compiled to machine compiled
+
+Vue compiling the template
+
+Ex:
+HTML H1 tag gets compiled to an object
+
+<h1 class="blue"> Hello world <h1/>  --> {tag: 'h1', attributes :{class: "blue", content: "Hello World"}}
+

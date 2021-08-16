@@ -1,0 +1,31 @@
+Vue Lifecycle allows us to run code at certain points in the application life cycle.
+
+Vue goes through a process called the life cycle - which enables us to run the code when a new instance is created.
+We are not limited to creating the data inside our instance.
+
+We can run code during the creation process and even after the instance is destroyed.
+
+Before the Vue life cycle may begin, the instance has to be created using the Vue createApp function
+
+https://v3.vuejs.org/guide/instance.html#lifecycle-diagram
+
+LifeCycle Steps:
+
+
+1. Vue.createApp().mount()
+    --> Lifecycle hook: beforeCreate
+2. Initialize data and methods
+3. Instance Create. --> Lifecycle hook: created
+4. Compile Template (el Property)
+5. Replace el Property with compiled Template
+    --> Lifecycle hook: beforeMount
+6. --> Lifecycle hook: Mounted
+7. Once mounted, application will watch for data changes
+    --> Lifecycle hook: beforeUpdate
+8. Applies any changes
+    --> Lifecycle hook: updated
+9. Go to step 0. Mounts. Cycle repeats
+10. Unmount
+    --> Lifecycle hook: beforeUnmount
+11. Vue Instance destroyed
+12. --> Lifecycle hook: unmounted
