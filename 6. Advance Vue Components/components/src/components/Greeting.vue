@@ -7,8 +7,14 @@ export default {
     name: "Greeting",
     data() {
       return {
-        msg: "Hello Worldss!"
+        msg: "Hello World!"
       }
     }
   }
 </script>
+
+<style scoped>
+p {
+    color: red
+}
+</style>

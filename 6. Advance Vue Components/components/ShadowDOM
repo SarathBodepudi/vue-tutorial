@@ -1,0 +1,2 @@
+1. A way to isolate components from the regular DOM with its own stylings, events and structure
+2. Not the Virtual DOM
